@@ -40,7 +40,7 @@ const root = new Vue({
     },
 
     mounted() {
-        this.getRandomEmails(10);
+        this.getRandomEmails(this.maxItems);
     },
 
 });
