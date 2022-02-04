@@ -15,7 +15,12 @@
 
 <body>
     <div id="root">
-
+        <!-- Mostro le email solo quando raggiungo -->
+        <ul>
+            <li v-for="email in emails">
+                {{email}}
+            </li>
+        </ul>
     </div>
     <script src="../js/script.js"></script>
 </body>
