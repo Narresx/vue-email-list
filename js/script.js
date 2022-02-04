@@ -21,14 +21,26 @@ const root = new Vue({
 
         getRandomEmail() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
+
                 console.log(res.data.response);
+
                 this.emails.push(res.data.response);
             });
+        },
+
+        // Una funzione che mi faccia ottenere il numero di random email desiderate
+        getRandomEmails(item) {
+
+            for (let i = 0; i < item; i++) {
+
+                this.getRandomEmail();
+
+            }
         }
     },
 
     mounted() {
-        this.getRandomEmail();
-    }
+        this.getRandomEmails(10);
+    },
 
 });
