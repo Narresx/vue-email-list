@@ -16,7 +16,7 @@
 <body>
     <div id="root">
         <!-- Mostro le email solo quando raggiungo 10 emeil -->
-        <ul>
+        <ul v-show="emails.length === 10">
             <li v-for="email in emails">
                 {{email}}
             </li>
